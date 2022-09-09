@@ -1,44 +1,37 @@
-import java.sql.Array;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(" Домашка 03");
+        double[] array = {1.3, -1.2, 2.2, -2.5, -3.1, 2.7, -1.3, -4.2, 3.1, -3.3, 4.3, -3.4, 1.0, -4.6, 6.6};
 
-        Scanner scanner = new Scanner(System.in);
-        double[] array = new double[15];
+        double result = 0;
+        int i = 0;
+        boolean a = false;
+        boolean b = false;
 
-        int pos =0;
-        int  bb = 0;
-        for (double elem:array
-             ) {elem = Math.random()*15-10;
-            array [bb]= elem;
-            if (array[bb]>0){pos ++;}
-            bb++ ;}
-        System.out.println(Arrays.toString(array));
+        for (double elem : array) {
+            if (a && b && elem > 0) {
+                result += elem;
+                i++;
 
-        double[] array2 = new double[pos];
-        int pos1=0;
-        int bb2=0;
-        for (double elem2: array) {
-         array[bb2]=elem2;
-         if (array[bb2]>0){array2[pos1]=array[bb2];
-        }
-         bb2++;
-        }
-        System.out.println(Arrays.toString(array2));
+                 System.out.println(elem);
+            } else if (elem < 0) {
+                b = true;
+            } else {
+                a = true;
+            }}
+            System.out.println("summa" + result);
+            System.out.println("cреднее арифметическое"+result/i);
+        for (int u = 0; u < array.length ; u++) {
+            for (int j = u + 1; j < args.length-1 ; j++){
+                if (array[j]>array[j+1]){double qw =array[j];
+                    array[j]=array[j+1];
+                    array[j+1]=qw;
+        }}
+            System.out.println(Arrays.toString(array));
 
-        //Дз на собразительность
-        Arrays.sort(array);
-        for (double sort:array) {
-            System.out.println(sort + ";");
-        }
+        }}}
 
-
-
-
-    }}
 
 
 
